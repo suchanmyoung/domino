@@ -4,7 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import net.domino.app.dto.StockPriceResponse;
+import net.domino.app.domain.StockPrice;
 import net.domino.app.service.StockPriceService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +19,7 @@ public class StockPriceController {
 
     @ApiOperation(value = "주식 종목에 대한 5일 간의 시세 데이터를 조회합니다.")
     @GetMapping("/stock/{stockCode}")
-    public List<StockPriceResponse> getFiveDaysStockPrice(@PathVariable final String stockCode) {
+    public List<StockPrice> getFiveDaysStockPrice(@PathVariable final String stockCode) {
         return stockPriceService.getFiveDaysStockPrice(stockCode);
     }
 

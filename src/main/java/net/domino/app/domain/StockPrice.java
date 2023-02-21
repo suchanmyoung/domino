@@ -1,4 +1,4 @@
-package net.domino.app.dto;
+package net.domino.app.domain;
 
 import java.time.LocalDateTime;
 import lombok.Builder;
@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class StockPriceResponse {
+public class StockPrice {
 
     private int open;
     private int high;
