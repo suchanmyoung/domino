@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import net.domino.app.dto.StockPriceResponse;
+import net.domino.app.domain.StockPrice;
 import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
@@ -21,7 +21,7 @@ public class YahooResponseParser {
 
     private final ObjectMapper objectMapper;
 
-    public List<StockPriceResponse> getStockPrice(final String json) {
+    public List<StockPrice> getStockPrice(final String json) {
         JsonNode jsonNode = readJsonTree(json);
 
         JsonNode timestamp = jsonNode.findPath("timestamp");
@@ -31,15 +31,16 @@ public class YahooResponseParser {
         JsonNode close = jsonNode.findPath("close");
         JsonNode volume = jsonNode.findPath("volume");
 
-        return IntStream.rangeClosed(0, 4)
-            .mapToObj(index -> StockPriceResponse.builder()
-                .open(open.get(index).asInt())
-                .high(high.get(index).asInt())
-                .low(low.get(index).asInt())
-                .close(close.get(index).asInt())
-                .volume(volume.get(index).asInt())
+        return IntStream.range(0, timestamp.size())
+            .mapToObj(index -> StockPrice.builder()
+                .open(getIndexValueAsInt(open, index))
+                .high(getIndexValueAsInt(high, index))
+                .low(getIndexValueAsInt(low, index))
+                .close(getIndexValueAsInt(close, index))
+                .volume(getIndexValueAsInt(volume, index))
                 .koreanTime(toKoreaTime(timestamp.get(index).asText()))
-                .build())
+                .build()
+            )
             .collect(Collectors.toList());
     }
 
@@ -51,6 +52,10 @@ public class YahooResponseParser {
         }
 
         return null;
+    }
+
+    private int getIndexValueAsInt(JsonNode node, int index) {
+        return node.get(index).asInt();
     }
 
     private LocalDateTime toKoreaTime(String timeStamp) {
