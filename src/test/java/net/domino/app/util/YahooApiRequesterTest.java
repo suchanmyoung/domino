@@ -31,4 +31,5 @@ class YahooApiRequesterTest {
             .isInstanceOf(YahooApiRequestException.class)
             .hasMessageContaining(wrongUrl);
     }
+
 }

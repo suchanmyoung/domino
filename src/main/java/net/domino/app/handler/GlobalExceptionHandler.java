@@ -16,4 +16,5 @@ public class GlobalExceptionHandler {
             .wrongUrl(exception.getMessage())
             .build();
     }
+
 }

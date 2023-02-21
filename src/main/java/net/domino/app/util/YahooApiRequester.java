@@ -17,4 +17,5 @@ public class YahooApiRequester {
             throw new YahooApiRequestException(url);
         }
     }
+
 }
