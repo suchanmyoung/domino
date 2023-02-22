@@ -2,7 +2,7 @@ package net.domino.app.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
-import net.domino.app.dto.StockPriceResponse;
+import net.domino.app.domain.StockPrice;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,7 +26,7 @@ class YahooResponseParserTest {
         ResponseEntity<String> response = yahooApiRequester.request(requestUrl);
 
         //when
-        List<StockPriceResponse> stockPrice = yahooResponseParser.getStockPrice(response.getBody());
+        List<StockPrice> stockPrice = yahooResponseParser.getStockPrice(response.getBody());
 
         //then
         Assertions.assertThat(stockPrice.size()).isEqualTo(5);
