@@ -38,7 +38,7 @@ public class YahooResponseParser {
                 .low(getIndexValueAsInt(low, index))
                 .close(getIndexValueAsInt(close, index))
                 .volume(getIndexValueAsInt(volume, index))
-                .koreanTime(toKoreaTime(timestamp.get(index).asText()))
+                .koreaTime(toKoreaTime(timestamp.get(index).asText()))
                 .build()
             )
             .collect(Collectors.toList());

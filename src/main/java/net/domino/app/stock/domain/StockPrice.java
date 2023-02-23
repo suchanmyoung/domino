@@ -13,6 +13,6 @@ public class StockPrice {
     private int low;
     private int close;
     private int volume;
-    private LocalDateTime koreanTime;
+    private LocalDateTime koreaTime;
 
 }
