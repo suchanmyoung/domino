@@ -10,7 +10,7 @@ public class StockPriceAcceptanceTest extends AcceptanceTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"005930", "035720", "035420"})
-    void 종목_데이터를_조회_API_정상응답_테스트(String stockCode) {
+    void 종목_데이터_조회_API_정상응답_테스트(String stockCode) {
         String path = "/stock/" + stockCode;
 
         when()
@@ -23,7 +23,7 @@ public class StockPriceAcceptanceTest extends AcceptanceTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"032860", "058530", "014200"})
-    void 존재하지않는_종목코드를_조회하면_예외처리(String stockCode) {
+    void 존재하지_않는_종목코드를_조회하면_예외처리(String stockCode) {
         //given
         String path = "/stock/" + stockCode;
         String exceptionMessage = "야후 API 호출에 실패하였습니다.";
