@@ -3,9 +3,9 @@ package net.domino.app.service;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import net.domino.app.domain.StockPrice;
-import net.domino.app.util.YahooApiRequester;
-import net.domino.app.util.YahooResponseParser;
-import net.domino.app.util.YahooUrlGenerator;
+import net.domino.app.yahoo.YahooApiRequester;
+import net.domino.app.yahoo.YahooResponseParser;
+import net.domino.app.yahoo.YahooUrlGenerator;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 

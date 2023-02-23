@@ -1,4 +1,4 @@
-package net.domino.app.util;
+package net.domino.app.yahoo;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

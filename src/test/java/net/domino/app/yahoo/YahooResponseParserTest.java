@@ -1,4 +1,4 @@
-package net.domino.app.util;
+package net.domino.app.yahoo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;

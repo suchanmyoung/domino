@@ -1,4 +1,4 @@
-package net.domino.app.util;
+package net.domino.app.yahoo;
 
 import lombok.RequiredArgsConstructor;
 import net.domino.app.exception.YahooApiRequestException;
