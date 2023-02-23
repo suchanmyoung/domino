@@ -1,4 +1,4 @@
-package net.domino.app.domain;
+package net.domino.app.stock.domain;
 
 import java.time.LocalDateTime;
 import lombok.Builder;

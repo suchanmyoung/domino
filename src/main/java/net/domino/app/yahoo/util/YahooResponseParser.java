@@ -1,4 +1,4 @@
-package net.domino.app.yahoo;
+package net.domino.app.yahoo.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import net.domino.app.domain.StockPrice;
+import net.domino.app.stock.domain.StockPrice;
 import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor

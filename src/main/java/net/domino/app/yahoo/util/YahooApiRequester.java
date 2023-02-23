@@ -1,7 +1,7 @@
-package net.domino.app.yahoo;
+package net.domino.app.yahoo.util;
 
 import lombok.RequiredArgsConstructor;
-import net.domino.app.exception.YahooApiRequestException;
+import net.domino.app.yahoo.exception.YahooApiRequestException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;

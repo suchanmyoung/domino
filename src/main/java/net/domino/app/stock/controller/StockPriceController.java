@@ -1,11 +1,11 @@
-package net.domino.app.controller;
+package net.domino.app.stock.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import net.domino.app.domain.StockPrice;
-import net.domino.app.service.StockPriceService;
+import net.domino.app.stock.domain.StockPrice;
+import net.domino.app.stock.service.StockPriceService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

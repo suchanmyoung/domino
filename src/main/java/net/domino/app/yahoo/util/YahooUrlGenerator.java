@@ -1,4 +1,4 @@
-package net.domino.app.yahoo;
+package net.domino.app.yahoo.util;
 
 import org.springframework.stereotype.Component;
 

@@ -1,13 +1,14 @@
-package net.domino.app.yahoo;
+package net.domino.app.yahoo.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.util.List;
-import net.domino.app.domain.StockPrice;
+import net.domino.app.stock.domain.StockPrice;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 class YahooResponseParserTest {
 

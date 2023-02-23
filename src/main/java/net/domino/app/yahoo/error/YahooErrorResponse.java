@@ -1,11 +1,11 @@
-package net.domino.app.error;
+package net.domino.app.yahoo.error;
 
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @Builder
-public class ErrorResponse {
+public class YahooErrorResponse {
 
     private int status;
     private String wrongUrl;

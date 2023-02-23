@@ -1,6 +1,8 @@
-package net.domino.app.yahoo;
+package net.domino.app.yahoo.util;
 
-import net.domino.app.exception.YahooApiRequestException;
+import net.domino.app.yahoo.exception.YahooApiRequestException;
+import net.domino.app.yahoo.util.YahooApiRequester;
+import net.domino.app.yahoo.util.YahooUrlGenerator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;

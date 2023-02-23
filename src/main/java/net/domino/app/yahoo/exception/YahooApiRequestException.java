@@ -1,4 +1,4 @@
-package net.domino.app.exception;
+package net.domino.app.yahoo.exception;
 
 public class YahooApiRequestException extends RuntimeException{
 
