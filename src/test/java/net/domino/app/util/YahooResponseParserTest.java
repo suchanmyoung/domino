@@ -7,6 +7,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 class YahooResponseParserTest {
 
@@ -16,7 +17,7 @@ class YahooResponseParserTest {
     @BeforeEach
     void setup() {
         yahooResponseParser = new YahooResponseParser(new ObjectMapper());
-        yahooApiRequester = new YahooApiRequester();
+        yahooApiRequester = new YahooApiRequester(new RestTemplate());
     }
 
     @Test
