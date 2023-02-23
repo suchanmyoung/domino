@@ -7,15 +7,10 @@ plugins {
 
 group = 'net.domino'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
 
 jib {
     from {
-        image = "amazoncorretto@sha256:5fee6a54cbb301301f16d8cc893eaf5f8d9aacf3bd40be4aae5fee3fb2d30c89"
-    }
-    to {
-        image = "audtncks2/domino-application"
-        tags = ["latest"]
+        image = "openjdk@sha256:1efc10742a26c56416e400611b1d7ba871dab6c478e8017ab0a226d87f26b78b"
     }
 }
 
